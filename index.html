@@ -1,106 +1,119 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>Jazz Sprint Monitor privacy notice (draft)</title>
+  <title>Jazz Sprint Monitor · 隐私说明 / Privacy notice</title>
   <style>
-    :root { color-scheme:light; color:#173d35; background:#f2f7f4; font:16px/1.75 system-ui,sans-serif; }
+    :root { color-scheme:light; --ink:#163e35; --muted:#455e57; --line:#cbded5; --paper:#fff; --wash:#f1f7f3; }
     * { box-sizing:border-box; }
-    body { margin:0; }
-    header,main,footer { max-width:1280px; margin:auto; padding:28px; }
-    header { padding-top:48px; }
-    h1 { font-size:clamp(28px,4vw,46px); line-height:1.2; }
-    h2 { font-size:25px; } h3 { font-size:19px; margin-top:28px; }
-    a { color:#12604a; overflow-wrap:anywhere; text-underline-offset:3px; }
-    a:focus-visible { outline:3px solid #12604a; outline-offset:4px; }
-    .draft { padding:20px; border:1px solid #ba9141; border-radius:14px; background:#fff3d4; color:#604514; }
-    main { padding-top:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
-    article { padding:28px; border:1px solid #ccded4; border-radius:18px; background:white; overflow-wrap:anywhere; }
-    li { margin:10px 0; } footer { color:#496158; font-size:14px; }
-    @media(max-width:850px) { main { grid-template-columns:1fr; } header,main,footer { padding:20px; } article { padding:22px; } }
-    @media print { main { display:block; } article { border:0; } }
+    body { margin:0; color:var(--ink); background:var(--wash); font:16px/1.75 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif; }
+    header,main,footer { max-width:1360px; margin:auto; padding:32px; }
+    header { padding-top:56px; }
+    .eyebrow { font-size:13px; letter-spacing:.14em; text-transform:uppercase; font-weight:750; }
+    h1 { font-size:clamp(28px,4vw,48px); line-height:1.2; margin:14px 0; letter-spacing:-.03em; }
+    h2 { font-size:24px; line-height:1.4; margin:0 0 20px; }
+    h3 { font-size:18px; margin:28px 0 8px; }
+    p { margin:10px 0; }
+    a { color:#12604a; text-underline-offset:4px; }
+    a:focus-visible { outline:3px solid #12604a; outline-offset:5px; }
+    .meta,.note,footer { color:var(--muted); }
+    .status { background:#fff4d8; border:1px solid #c39b44; border-radius:14px; padding:18px 22px; margin:24px 0; color:#644817; }
+    nav { display:flex; flex-wrap:wrap; gap:12px 24px; }
+    main { padding-top:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; align-items:start; }
+    article { background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:30px; box-shadow:0 8px 26px #163e3508; overflow-wrap:anywhere; }
+    ul { padding-left:22px; }
+    li { margin:8px 0; }
+    .contact { border-left:4px solid #28775e; padding-left:16px; }
+    footer { padding-top:8px; padding-bottom:40px; font-size:14px; }
+    @media (max-width:900px) { main { grid-template-columns:1fr; } header,main,footer { padding:24px; } article { padding:24px; } }
+    @media print { body { background:white; } header,main,footer { padding:12px; } main { display:block; } article { box-shadow:none; border:0; padding:12px 0; } }
   </style>
 </head>
 <body>
   <header>
-    <p>PUBLIC REVIEW DRAFT · 2026-10-28</p>
-    <h1>Jazz Sprint Monitor privacy notice (draft)</h1>
-    <div class="draft"><strong>DRAFT — NOT FINAL. No legal approval. Not suitable for store submission.</strong><br><span lang="zh-CN">公开审阅草稿，非最终政策，未经法律批准，不得作为正式商店隐私政策提交。</span></div>
-    <p><a href="#zh" lang="zh-CN">中文</a> · <a href="#en">English</a></p>
+    <div class="eyebrow">HOLDONgoing · Privacy notice</div>
+    <h1>Jazz Sprint Monitor<br>隐私说明 / Privacy notice</h1>
+    <p class="meta">修订日期 / Revised: 2026-10-28 · Store version 1.17.122</p>
+    <div class="status"><strong>适用范围 / Scope</strong><br>描述本扩展及本地任务助手的实际数据处理；不替企业 Jazz/HEP、身份服务、浏览器商店或 GitHub 作出保留期或法律承诺。Describes this extension and its local task companion, not enterprise-service retention or legal commitments.</div>
+    <nav aria-label="Language sections / 语言分区"><a href="#zh">中文说明</a><a href="#en" lang="en">English notice</a></nav>
   </header>
   <main>
     <article id="zh" lang="zh-CN" aria-labelledby="zh-title">
-      <h2 id="zh-title">中文 · 隐私说明草稿</h2>
-      <p>本工具面向获授权的企业 Jazz 服务用户，支持工作项读取、排期、质量检查及本地任务。企业功能需要相应网络访问、权限和认证会话。本草稿描述数据处理，不声称零收集，也不代表企业背书。</p>
-      <h3>1 · 维护者与联系</h3>
-      <p>公开 GitHub 维护者账号：<strong>HOLDONgoing</strong>。此账号不等于已核验的法定控制者身份。一般支持可使用本独立仓库的公开 Issues：<a href="https://github.com/HOLDONgoing/jazz-sprint-monitor-privacy/issues">https://github.com/HOLDONgoing/jazz-sprint-monitor-privacy/issues</a>。</p>
-      <p><strong>Issues 完全公开。请勿发布个人信息、企业敏感信息、业务数据、附件、诊断原件或密码、会话 Cookie、令牌等安全凭据。</strong>私密请求渠道及正式隐私权申请流程尚待确定，请勿在公开 Issues 提交私密材料。</p>
-      <h3>2 · 企业数据与用户发起的传输</h3>
-      <p>扩展从获授权的企业 Jazz 服务读取工作项编号、标题、项目、状态、日期、工时、排期及关系等，用于展示与分析。用户明确发起并确认业务更新时，相关变更会发送至企业服务；并非所有数据都只留在本地。</p>
-      <p>企业 Jazz 与身份服务处理其服务端记录。其访问权限、服务器位置、保留期、法律依据及跨境安排须由负责方确认，本草稿不替这些服务作出保证。</p>
-      <h3>3 · 本地缓存、任务、附件与提醒</h3>
+      <h2 id="zh-title">中文 · 数据如何处理</h2>
+      <p>本工具面向获授权的企业 Jazz/HEP 用户，用于工作项读取、排期、质量检查及本地任务。使用企业功能需要企业网络或 VPN、相应访问权限及现有 SSO 会话。本说明描述实际数据处理，不声称“零收集”。</p>
+      <h3>1 · 发布者与联系标识</h3>
+      <p class="contact">发布者与维护联系：<strong>HOLDONgoing（GitHub维护账号）</strong>。这是公开维护账号，不是法律姓名，也不表示企业数据控制者或企业背书。<br>支持：<a href="https://github.com/HOLDONgoing/jazz-sprint-monitor-privacy/issues">GitHub Issues</a>。</p>
+      <p><strong>公开 Issues 不是秘密通道。</strong>仅提交完全合成的复现信息；禁止发布密码、Cookie、Token、MFA、内网地址、企业/客户/项目/工作项信息、个人资料、原始诊断或附件。不提供已核实的私人收件渠道；不要把账号名当邮箱。</p>
+      <h3>2 · 企业工作项与网络传输</h3>
+      <p>扩展从其配置限定的企业 Jazz/HEP 服务读取工作项编号、标题、项目、状态、日期、工时/估算、排期及关系等信息，用于展示与分析。本公开说明不披露企业主机名。用户明确执行 HEP 同步时，所确认的业务变更会发送至该企业服务；不是所有数据都只留在本地。</p>
+      <p>企业 Jazz/HEP 及身份服务处理其服务端记录；服务器保留期、位置、法律依据、备份及跨境安排由相应组织负责解释。本说明不替企业作出保证，扩展维护者不能删除企业服务端数据。</p>
+      <h3>3 · 浏览器与独立任务目录</h3>
       <ul>
-        <li>浏览器本地存储包含偏好、语言、工作项/关闭项缓存、任务缓存及诊断。当前后台写队列对其管理的扩展本地存储执行 50 MiB 上限，并非所有磁盘数据的总上限。</li>
-        <li>附件二进制和元数据可能在扩展 IndexedDB 缓存或暂存。受控企业采集页的业务请求参数也可能暂存在该页面的 sessionStorage 或 DOM 属性中。</li>
-        <li>另行安装的本地任务 companion 通过 Native Messaging 保存任务、描述、提醒、附件、通知记录及初始化标记。任务文件独立于扩展安装；获授权的浏览器配置可能共享该目录。</li>
-        <li>浏览器提醒和通知用于任务提示；可受浏览器、操作系统及通知权限影响。本静态隐私网页不请求通知权限。</li>
+        <li>浏览器扩展本地存储包含偏好、语言、扫描/关闭项缓存、任务缓存及诊断。现有后台写队列对其管理的 storage.local 数据执行 50 MiB 上限；这不是所有磁盘数据的总上限。</li>
+        <li>附件二进制和元数据可在扩展 IndexedDB 中缓存或暂存。My Work 请求捕获还可能在企业页面 sessionStorage / DOM 属性中暂存业务请求参数；它们不是公开上传。</li>
+        <li>另行安装的 Windows Task Companion 通过本地 Native Messaging 在当前用户的独立本地任务目录保存任务、描述、提醒、附件及通知账本；父目录还保留初始化标记。任务目录独立于扩展安装。</li>
+        <li>Companion 为外部 Windows/.NET Framework 依赖，不在扩展 ZIP 内。它不负责下载代码、安装扩展或扩展自更新。不同获授权浏览器/profile 可共享任务目录，并非按 profile 隔离。</li>
       </ul>
-      <h3>4 · 认证与敏感权限</h3>
-      <p>SSO 由企业服务和身份服务负责。需要交互时，用户在外部浏览器自行完成密码及 MFA；扩展不以主动读取或保存密码/MFA 为功能，也不调用 Cookie API 提取 Cookie 值作为凭据。浏览器仍会按其规则随请求发送会话凭据。</p>
-      <p>受控采集使用页面访问、脚本及 debugger 等敏感能力，可暂存业务请求对象并接收网络事件元数据。因此不能绝对保证扩展处理的所有对象均不含 Cookie 或其他敏感字段；这不等于以提取登录凭据或监视任意浏览为用途。</p>
-      <h3>5 · 诊断、导出与遥测边界</h3>
-      <p>用户主动导出的诊断、快照、JSON/Excel 或附件可能含业务编号、标题、项目、填写内容、环境版本及脱敏错误。脱敏不保证匿名；分享前须检查内容与接收方授权。没有自动支持上传、广告或分析遥测；本公开页面及本次隐私仓库不新增遥测。</p>
-      <p>本页仅含静态 HTML 与内嵌 CSS，无脚本、远程字体、图片、追踪器、表单或外部可执行资源；离线亦可阅读。链接仅在主动打开时访问 GitHub 服务或官方文档。本页托管并不发布插件代码，也不向此仓库自动发送企业业务数据。</p>
+      <h3>4 · SSO 与敏感权限</h3>
+      <p>请求复用浏览器已有认证会话；需要交互时，用户在外部浏览器页面自行完成密码、MFA 等步骤。扩展不主动读取或保存密码/MFA，不调用 Cookie API 提取 Cookie 值作为凭据；manifest 没有 cookies 权限。浏览器仍会按其规则随请求发送会话凭据。</p>
+      <p>debugger 权限用于受控企业 My Work 采集页的网络捕获、响应读取及随包固定表达式执行，可接收浏览器网络事件元数据；不能据此承诺所有事件都绝不包含敏感字段。现有逻辑使用业务 URL、参数、响应等信息，不以读取登录凭据或监视任意浏览为用途。</p>
+      <p>tabs / activeTab / scripting 支持用户触发的页面采集与有界 SSO 恢复；storage / unlimitedStorage 支持本地业务缓存；nativeMessaging 支持任务文件；alarms / notifications 支持提醒；contextMenus 支持将工作项加入任务。站点访问仅限扩展配置限定的企业服务域。高敏权限及具体商店披露仍须审核。</p>
+      <h3>5 · 诊断、导出与接收方</h3>
+      <p>诊断、问题快照及用户主动导出的 JSON/Excel/附件，可能包含业务编号、标题、项目、用户填写内容、环境版本与脱敏错误。脱敏有边界，不保证匿名；分享前请检查文件与接收方授权。没有自动支持上传、广告或分析遥测；用户自行分享的文件由所选接收方处理。</p>
+      <p>Microsoft/Google 按各自政策处理商店信息与上传材料。扩展不下载远程可执行 JavaScript、不轮询仓库发行、不自行更新；扩展更新由浏览器/商店机制处理。</p>
+      <p>本隐私网站由 GitHub Pages 托管，支持由 GitHub Issues 提供。GitHub Pages 出于安全目的记录访问者 IP。访问网站或发帖时，GitHub 可处理 IP、浏览器请求、账号、帖子及附件等数据，适用 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 官方隐私声明</a>。本静态页面不增加脚本、表单或分析遥测；这不意味着托管方不处理访问数据。</p>
       <h3>6 · 保留、删除与备份</h3>
       <ul>
-        <li>偏好与浏览器缓存没有统一按天到期规则；可被替换或由用户清除相关扩展数据，卸载效果取决于浏览器。新扩展身份不能自动读取旧身份的数据。</li>
-        <li>当前持久诊断日志最多 200 条，并非按天删除。通知协调会清理超过 90 天的记录，另有 10,000 条安全限制；近期去重保护及超限拒绝可能适用，这不是定时擦除保证。</li>
-        <li>本地任务和附件没有统一自动到期承诺。扩展或 companion 卸载不会自动删除独立任务文件、附件及初始化标记；请先备份，再分别清理缓存、本地任务与附件、标记及备份。</li>
-        <li>导出文件、下载附件、操作系统或企业备份，以及企业服务端记录，不会因卸载扩展而自动删除；须在对应位置与负责方安排处理。</li>
+        <li>偏好与浏览器缓存没有统一按天到期规则，直到被替换、用户清除相关扩展数据或卸载；具体清理范围取决于浏览器。新扩展 ID 不能自动读取旧 ID 的数据。</li>
+        <li>持久诊断日志最多 200 条，不是按天删除。通知账本在运行协调时清理超过 90 天的记录，设 10,000 条安全限制；近期记录受去重保护，超限可拒绝新增，并非定时保证擦除。已消费/取消的稍后提醒通常在协调时保留约 1 天，未消费记录另行处理。</li>
+        <li>本地任务/附件没有统一自动到期承诺。扩展或 companion 卸载不会删除独立任务目录和初始化标记。请先备份，再按经确认的操作清理任务、附件、缓存、标记及备份；不要把删除一个目录当成全部清除。</li>
+        <li>已导出文件、下载附件、操作系统/企业备份、Jazz 服务端记录不随扩展卸载自动删除；须在对应位置与负责方安排删除。</li>
       </ul>
-      <h3>7 · GitHub 托管与未决事项</h3>
-      <p>访问 GitHub Pages 时，GitHub 会为安全目的记录访问者 IP 地址，并可能按其政策处理其他技术数据；这独立于本页没有自建追踪器的事实。参见 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages 数据收集说明</a>及 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>。公开 Issues 的内容也由 GitHub 托管且可被他人查看。</p>
-      <p>正式发布前仍须确认法定控制者、有效私密联系渠道、适用法域与隐私权程序、法律依据、正式保留政策、托管访问与跨境安排。不虚构法律保证或固定期限。可停用/卸载、限制权限并备份后清理本地数据；这不会撤回已发送的业务变更。</p>
-      <p><strong>本公开草稿不是已批准的最终政策，不能用于正式商店提交。</strong></p>
+      <h3>7 · 数据请求与用户选择</h3>
+      <p>企业数据访问、更正、删除、适用法域或法律依据问题，请联系你的组织及企业服务管理员；扩展维护者不能代其响应或删除企业服务端数据。GitHub 账号/帖子数据请求按 GitHub 官方流程处理。本地扩展行为问题可通过上述 Issues 联系维护账号，但不得附敏感资料；不虚构法域、权利响应期限或法律保证。</p>
+      <p>可停止使用、停用/卸载扩展、限制权限，并在备份后清理本地数据。撤销权限会影响功能，不撤回已发送的 HEP 变更或删除既有导出。不要在公开 Issues 提交企业数据删除所需身份或数据证明，向组织寻求其认可的安全渠道。</p>
+      <p class="note">公开隐私地址：<a href="https://holdongoing.github.io/jazz-sprint-monitor-privacy/">https://holdongoing.github.io/jazz-sprint-monitor-privacy/</a>。本说明按实际行为提供，不声称企业、法律或商店批准。</p>
     </article>
     <article id="en" lang="en" aria-labelledby="en-title">
-      <h2 id="en-title">English · Draft privacy notice</h2>
-      <p>This tool supports authorized corporate Jazz users with work-item reading, planning, quality checks and local tasks. Corporate features require appropriate network access, permissions and an authenticated session. This draft describes processing; it is not a zero-collection claim or corporate endorsement.</p>
-      <h3>1 · Maintainer and contact</h3>
-      <p>Public GitHub maintainer account: <strong>HOLDONgoing</strong>. This account is not a verified legal controller identity. General support is available through this independent repository's public Issues: <a href="https://github.com/HOLDONgoing/jazz-sprint-monitor-privacy/issues">https://github.com/HOLDONgoing/jazz-sprint-monitor-privacy/issues</a>.</p>
-      <p><strong>Issues are public. Do not post personal information, confidential corporate information, business records, attachments, raw diagnostics or security credentials such as passwords, session cookies or tokens.</strong> A private request channel and formal privacy-rights procedure are still to be determined. Do not submit private material in public Issues.</p>
-      <h3>2 · Corporate data and user-initiated transfers</h3>
-      <p>The extension reads identifiers, titles, projects, states, dates, effort, scheduling and relationships from authorized corporate Jazz services for display and analysis. Explicitly initiated and confirmed business updates send the relevant changes to the corporate service; not all data stays local.</p>
-      <p>Corporate Jazz and identity services process their own server-side records. Access controls, server locations, retention, legal basis and cross-border arrangements require confirmation by the responsible parties. This draft makes no guarantees on their behalf.</p>
-      <h3>3 · Local caches, tasks, attachments and reminders</h3>
+      <h2 id="en-title">English · How data is handled</h2>
+      <p>This tool supports authorized corporate Jazz/HEP users with work-item reading, planning, quality checks and local tasks. Corporate features require network/VPN access, appropriate authorization and an existing SSO session. This notice describes data processing; it is not a “zero collection” claim.</p>
+      <h3>1 · Publisher and contact identifier</h3>
+      <p class="contact">Publisher and maintenance contact: <strong>HOLDONgoing (GitHub maintenance account)</strong>, not a legal name or assertion of corporate controllership or endorsement.<br>Support: <a href="https://github.com/HOLDONgoing/jazz-sprint-monitor-privacy/issues">GitHub Issues</a>.</p>
+      <p><strong>Public Issues are not confidential.</strong> Use entirely synthetic reproductions. Do not post passwords, cookies, tokens, MFA, internal URLs, corporate/customer/project/work-item information, personal data, raw diagnostics or attachments. No verified private intake channel is offered; the account name is not an email address.</p>
+      <h3>2 · Corporate work items and network transfers</h3>
+      <p>The extension reads identifiers, titles, projects, states, dates, effort/estimates, scheduling and relationships from the corporate Jazz/HEP service restricted by its configuration for display and analysis. This public notice does not disclose corporate hostnames. Explicit user-initiated HEP synchronization sends confirmed business changes to that corporate service; not all data stays local.</p>
+      <p>Corporate Jazz/HEP and identity services handle their server-side records. Their organizations explain retention, server locations, legal basis, backups and cross-border arrangements. This notice gives no guarantees on their behalf; the extension maintainer cannot delete enterprise server data.</p>
+      <h3>3 · Browser storage and independent task files</h3>
       <ul>
-        <li>Browser-local storage holds preferences, language, work-item/closed-item caches, task caches and diagnostics. The current background queue caps the extension-local storage it manages at 50 MiB; this is not a cap on all disk data.</li>
-        <li>Attachment binary data and metadata may be cached or staged in extension IndexedDB. Business request parameters may also be temporarily placed in sessionStorage or DOM attributes on controlled corporate collection pages.</li>
-        <li>A separately installed local task companion uses Native Messaging to save tasks, descriptions, reminders, attachments, notification records and an initialization marker. These files are independent of the extension installation; authorized browser profiles may share the directory.</li>
-        <li>Browser reminders and notifications provide task alerts, subject to browser, operating-system and permission behavior. This static privacy webpage does not request notification permission.</li>
+        <li>Extension-local storage holds preferences, language, scan/closed-item caches, task caches and diagnostics. The existing background write queue enforces 50 MiB for the storage.local data it manages; this is not a cap on all disk data.</li>
+        <li>Attachment binary data and metadata may be cached or staged in extension IndexedDB. My Work request capture may also temporarily place business request parameters in corporate-page sessionStorage / DOM attributes; this is not public uploading.</li>
+        <li>A separately installed Windows Task Companion uses local Native Messaging to save tasks, descriptions, reminders, attachments and notification records in the current user's independent local task directory. Its parent directory also retains an initialization marker. This storage is independent of the extension installation.</li>
+        <li>The companion is an external Windows/.NET Framework dependency, excluded from the extension ZIP. It does not download code, install extensions or self-update the extension. Authorized browsers/profiles may share the task directory; it is not profile-isolated.</li>
       </ul>
-      <h3>4 · Authentication and sensitive permissions</h3>
-      <p>Corporate and identity services provide SSO. Users complete password and MFA interaction in an external browser. The extension is not designed to actively read or store passwords/MFA, and does not call a Cookie API to extract cookie values as credentials. The browser still sends session credentials under its own rules.</p>
-      <p>Controlled collection uses sensitive capabilities including page access, scripting and debugger access. It may temporarily retain business request objects and receive network-event metadata. It is therefore not an absolute guarantee that every processed object is free of cookies or other sensitive fields; credential extraction and arbitrary browsing surveillance are not its purpose.</p>
-      <h3>5 · Diagnostics, exports and telemetry boundaries</h3>
-      <p>User-initiated diagnostic, snapshot, JSON/Excel and attachment exports may contain business identifiers, titles, projects, entered content, environment versions and sanitized errors. Sanitization does not guarantee anonymity. Review content and recipient authorization before sharing. There is no automatic support upload, advertising or analytics telemetry; this public page and privacy repository add no telemetry.</p>
-      <p>This page contains only static HTML and inline CSS: no scripts, remote fonts, images, trackers, forms or external executable resources. It is readable offline. Links access GitHub services or official documentation only when opened. Hosting this page does not publish extension code or automatically send corporate business data to this repository.</p>
+      <h3>4 · SSO and sensitive permissions</h3>
+      <p>Requests use the browser's existing authenticated session. If interaction is needed, the user completes password/MFA steps in an external browser page. The extension does not actively read or store passwords/MFA, or call a Cookie API to extract Cookie values as credentials; the manifest has no cookies permission. The browser still sends session credentials under its own rules.</p>
+      <p>The debugger permission supports network capture, response reading and bundled fixed expressions in controlled corporate My Work collection pages. It can receive browser network-event metadata; this is not a guarantee that every event is free of sensitive fields. Existing logic uses business URLs, parameters and responses, not login-credential extraction or arbitrary browsing surveillance.</p>
+      <p>tabs / activeTab / scripting support user-triggered collection and bounded SSO recovery; storage / unlimitedStorage support local business caches; nativeMessaging supports task files; alarms / notifications support reminders; contextMenus supports adding work items to tasks. Host access is restricted to the corporate service domain defined in the extension configuration. Sensitive permissions and store disclosures still require review.</p>
+      <h3>5 · Diagnostics, exports and recipients</h3>
+      <p>Diagnostics, issue snapshots and user-initiated JSON/Excel/attachment exports may contain business identifiers, titles, projects, user-supplied content, environment versions and sanitized errors. Sanitization is bounded, not an anonymity guarantee. Review files and recipient authorization before sharing. There is no automatic support upload, advertising or analytics telemetry; user-shared files are handled by the chosen recipients.</p>
+      <p>Microsoft/Google handle store information and uploaded materials under their own policies. The extension does not download remote executable JavaScript, poll repository releases or self-update; browser/store mechanisms handle extension updates.</p>
+      <p>GitHub Pages hosts this privacy site and GitHub Issues provides support. GitHub Pages logs visitor IP addresses for security purposes. GitHub may process IP addresses, browser requests, account information, posts and attachments when you visit or post, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">official GitHub Privacy Statement</a>. This static page adds no scripts, forms or analytics; that does not mean the hosting provider processes no access data.</p>
       <h3>6 · Retention, deletion and backups</h3>
       <ul>
-        <li>Preferences and browser caches have no uniform age-based expiry. They may be replaced or cleared by the user; uninstall behavior depends on the browser. A new extension identity cannot automatically access the old identity's data.</li>
-        <li>The current persistent diagnostic log holds at most 200 entries, not a time-based retention period. Notification reconciliation removes records older than 90 days and applies a 10,000-record safety limit; recent deduplication protection and refusal of new entries may apply. This is not scheduled erasure.</li>
-        <li>No uniform automatic expiry is promised for local tasks or attachments. Uninstalling the extension or companion does not automatically delete independent task files, attachments or initialization markers. Back up first, then separately clear browser caches, local tasks and attachments, markers and backups.</li>
-        <li>Exports, downloaded attachments, operating-system/corporate backups and corporate server records are not automatically deleted by extension uninstall. Arrange handling at the relevant locations with the responsible parties.</li>
+        <li>Preferences and browser caches have no uniform age-based expiry; they remain until replaced, cleared by the user or removed on uninstall, subject to browser behavior. A new extension ID cannot automatically access the old ID's data.</li>
+        <li>The persistent diagnostic log holds at most 200 entries, not a time-based retention period. Notification reconciliation removes records older than 90 days and applies a 10,000-record safety limit. Recent records are protected for deduplication and excess can block new entries; this is not a scheduled erasure guarantee. Consumed/cancelled snoozes are generally retained for about one day during reconciliation; unconsumed entries follow separate handling.</li>
+        <li>No uniform automatic expiry is promised for local tasks/attachments. Extension or companion uninstall does not delete the independent task directory or initialization marker. Back up first, then use an approved process to remove tasks, attachments, caches, markers and backups; deleting one directory is not complete erasure.</li>
+        <li>Exported files, downloaded attachments, OS/corporate backups and Jazz server records are not automatically deleted by extension uninstall. Arrange deletion at the corresponding locations with the responsible parties.</li>
       </ul>
-      <h3>7 · GitHub hosting and unresolved decisions</h3>
-      <p>When GitHub Pages is visited, GitHub logs visitor IP addresses for security and may process other technical data under its policies. This is separate from the absence of page-owned trackers. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Public Issues are also hosted by GitHub and visible to others.</p>
-      <p>Before a final release, confirm the legal controller, effective private contact channel, applicable jurisdiction and privacy-rights process, legal basis, formal retention policy, hosting access and cross-border arrangements. No legal guarantee or fixed period is invented. You may disable/uninstall, restrict permissions and clear local data after backing up; this does not undo submitted business changes.</p>
-      <p><strong>This public draft is not an approved final policy and must not be used for a formal store submission.</strong></p>
+      <h3>7 · Data requests and user choices</h3>
+      <p>Contact your organization and enterprise service administrators for enterprise-data access, correction, deletion, jurisdiction or legal-basis questions. The extension maintainer cannot respond on their behalf or delete enterprise server data. Use GitHub's official procedures for GitHub account/post requests. Contact the maintenance account via Issues for local extension behavior only without sensitive details; no jurisdiction, legal response deadline or legal guarantee is invented.</p>
+      <p>You may stop using, disable or uninstall the extension, restrict permissions and clear relevant local data after backing up. Revoking permissions does not undo HEP changes or remove exports. Do not post identity or enterprise-data evidence in public Issues; ask your organization for its approved secure channel.</p>
+      <p class="note">Public policy URL: <a href="https://holdongoing.github.io/jazz-sprint-monitor-privacy/">https://holdongoing.github.io/jazz-sprint-monitor-privacy/</a>. This behavior-based notice does not claim corporate, legal or store approval.</p>
     </article>
   </main>
-  <footer>Public review draft · 2026-10-28 · Maintainer: HOLDONgoing · Privacy notice only; no extension source code.</footer>
+  <footer>2026-10-28 · HOLDONgoing（GitHub维护账号） · <a href="#zh">中文</a> / <a href="#en" lang="en">English</a></footer>
 </body>
 </html>
